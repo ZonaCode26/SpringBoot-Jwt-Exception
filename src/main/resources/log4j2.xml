@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration  >
+
+<Appenders>
+	<!-- When async enabled, disable the immediateFlush to see good performance results -->
+    <RollingFile name="clientes-api" fileName="logs/cliente-logs.txt" append="true" filePattern="logs/cliente-logs.txt.%i" >
+    	<PatternLayout pattern="%5p [%d{ISO8601}] : [%t] : %C{1}: %M(): %m%n"/>
+        <Policies>
+        	<SizeBasedTriggeringPolicy size="30 MB"/>
+        </Policies>
+        <DefaultRolloverStrategy max="100" fileIndex="min" />
+	</RollingFile>
+	
+	<RollingFile name="productos-api" fileName="logs/producto-logs.txt" append="true" filePattern="logs/producto-logs.txt.%i" >
+    	<PatternLayout pattern="%5p [%d{ISO8601}] : [%t] : %C{1}: %M(): %m%n"/>
+        <Policies>
+        	<SizeBasedTriggeringPolicy size="30 MB"/>
+        </Policies>
+        <DefaultRolloverStrategy max="100" fileIndex="min" />
+	</RollingFile>
+	
+	
+	<RollingFile name="ventas-api" fileName="logs/venta-logs.txt" append="true" filePattern="logs/venta-logs.txt.%i" >
+    	<PatternLayout pattern="%5p [%d{ISO8601}] : [%t] : %C{1}: %M(): %m%n"/>
+        <Policies>
+        	<SizeBasedTriggeringPolicy size="30 MB"/>
+        </Policies>
+        <DefaultRolloverStrategy max="100" fileIndex="min" />
+	</RollingFile>
+	
+	
+	<RollingFile name="detalleventas-api" fileName="logs/detalleventa-logs.txt" append="true" filePattern="logs/detalleventa-logs.txt.%i" >
+    	<PatternLayout pattern="%5p [%d{ISO8601}] : [%t] : %C{1}: %M(): %m%n"/>
+        <Policies>
+        	<SizeBasedTriggeringPolicy size="30 MB"/>
+        </Policies>
+        <DefaultRolloverStrategy max="100" fileIndex="min" />
+	</RollingFile>
+	
+	<RollingFile name="logins-api" fileName="logs/login-logs.txt" append="true" filePattern="logs/login-logs.txt.%i" >
+    	<PatternLayout pattern="%5p [%d{ISO8601}] : [%t] : %C{1}: %M(): %m%n"/>
+        <Policies>
+        	<SizeBasedTriggeringPolicy size="30 MB"/>
+        </Policies>
+        <DefaultRolloverStrategy max="100" fileIndex="min" />
+	</RollingFile>
+	
+	
+</Appenders>
+
+<!-- log4j levels: TRACE < DEBUG < INFO < WARN < ERROR < FATAL -->
+<Loggers>
+	<!-- includeLocation should be true for async loggers otherwise it won't print the Location information -->
+	<Logger name="clientes-error" level="ERROR" additivity="false" includeLocation="true">
+		<AppenderRef ref="clientes-api"/>
+			
+	</Logger>
+	<Logger name="productos-error" level="ERROR" additivity="false" includeLocation="true">
+		<AppenderRef ref="productos-api"/>
+	</Logger>
+	
+	<Logger name="ventas-error" level="ERROR" additivity="false" includeLocation="true">
+		<AppenderRef ref="ventas-api"/>
+	</Logger>
+	
+	<Logger name="detalleventas-error" level="ERROR" additivity="false" includeLocation="true">
+		<AppenderRef ref="detalleventas-api" />
+	</Logger>
+
+	<Logger name="logins-all" level="DEBUG" additivity="false" includeLocation="true">
+		<AppenderRef ref="logins-api"  />
+	</Logger>
+	
+
+<!-- 	<Root level="DEBUG" additivity="false"> -->
+<!-- 		<AppenderRef ref="login-api" /> -->
+<!-- 	</Root> -->
+	
+</Loggers>
+
+</Configuration>

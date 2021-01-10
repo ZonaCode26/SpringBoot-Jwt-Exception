@@ -1,0 +1,1 @@
+ERROR [2021-01-10T15:27:30,510] : [http-nio-8080-exec-7] : ResponseExceptionHandler: manejarModeloException(): ExceptionResponseCustom [httpStatus=404 NOT_FOUND, message=ID NO ENCONTRADO 12313, code=SOAINT001, backendMesage=Recurso no encontrado., fecha=2021-01-10T15:27:30.510]

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.1</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.soaint</groupId>
+	<artifactId>soaint-ecommerce</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>soaint-ecommerce</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+	            <exclusion>
+	                <groupId>org.springframework.boot</groupId>
+	                <artifactId>spring-boot-starter-logging</artifactId>
+	            </exclusion>
+	        </exclusions>
+	        
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+
+<!-- 		<dependency> -->
+<!-- 		    <groupId>org.apache.logging.log4j</groupId> -->
+<!-- 		    <artifactId>log4j-core</artifactId> -->
+<!-- 		    <version>2.7</version> -->
+<!-- 		</dependency> -->
+		
+<!-- 		<dependency> -->
+<!-- 		    <groupId>org.apache.logging.log4j</groupId> -->
+<!-- 		    <artifactId>log4j-core</artifactId> -->
+<!-- 		    <version>2.7</version> -->
+<!-- 		    <type>test-jar</type> -->
+<!-- 		    <scope>test</scope> -->
+<!-- 		</dependency> -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Necesario desde Spring Boot 2.3 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-security</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>io.jsonwebtoken</groupId>
+				<artifactId>jjwt</artifactId>
+				<version>0.9.1</version>
+			</dependency>
+
+		<!-- Seguridad jwt con auot2-->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-security</artifactId> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.security</groupId> -->
+<!-- 			<artifactId>spring-security-jwt</artifactId> -->
+<!-- 			<version>1.0.10.RELEASE</version> -->
+<!-- 		</dependency> -->
+		
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.security.oauth</groupId> -->
+<!-- 			<artifactId>spring-security-oauth2</artifactId> -->
+<!-- 			<version>2.3.5.RELEASE</version> -->
+<!-- 		</dependency> -->
+		
+
+
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-test</artifactId> -->
+<!-- 			<scope>test</scope> -->
+<!-- 		</dependency> -->
+
+
+<!-- 	<dependency> -->
+<!-- 		<groupId>io.reactivex.rxjava2</groupId> -->
+<!-- 		<artifactId>rxjava</artifactId> -->
+<!-- 		<version>2.0.8</version> -->
+<!-- 	</dependency> -->
+		
+<!-- 		<dependency> -->
+<!--     <groupId>javax.validation</groupId> -->
+<!--     <artifactId>validation-api</artifactId> -->
+<!--     <version>2.0.0.Final</version> -->
+<!-- </dependency> -->
+
+<!-- 		<dependency> -->
+<!--     <groupId>com.squareup.retrofit2</groupId> -->
+<!--     <artifactId>adapter-rxjava</artifactId> -->
+<!--     <version>2.3.0</version> -->
+<!-- </dependency> -->
+
+
+<!-- <dependency> -->
+<!--     <groupId>com.fasterxml.jackson.core</groupId> -->
+<!--     <artifactId>jackson-core</artifactId> -->
+<!--     <version>2.4.3</version> -->
+<!-- </dependency> -->
+<!-- <dependency> -->
+<!--     <groupId>com.fasterxml.jackson.core</groupId> -->
+<!--     <artifactId>jackson-databind</artifactId> -->
+<!--     <version>2.4.3</version> -->
+<!-- </dependency> -->
+
+<!-- 		<dependency> -->
+<!--             <groupId>io.reactivex.rxjava2</groupId> -->
+<!--             <artifactId>rxjava</artifactId> -->
+<!--             <version>2.2.10</version> -->
+<!--         </dependency> -->
+        <!--IMPORTANT!!! ADD THIS DEPENDENCY TO SOLVE HttpMediaNotAcceptableException-->
+<!--         <dependency> -->
+<!--             <groupId>io.reactivex</groupId> -->
+<!--             <artifactId>rxjava-reactive-streams</artifactId> -->
+<!--             <version>1.2.1</version> -->
+<!--         </dependency> -->
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		
+			<!-- exclude junit 4 -->
+		
+			<exclusions>
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+			<!-- Junit 5 -->
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-launcher</artifactId>
+				<scope>test</scope>
+			</dependency>
+		
+			<!-- Mockito extention -->
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-junit-jupiter</artifactId>
+				<scope>test</scope>
+			</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
