@@ -28,6 +28,7 @@ public class Venta {
 	private LocalDateTime fecha;
 	
 	public Venta() {
+		this.fecha = LocalDateTime.now();
 	}
 
 	public Venta(Integer idVenta, Cliente cliente, LocalDateTime fecha) {

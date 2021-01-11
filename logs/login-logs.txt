@@ -53,3 +53,10 @@ DEBUG [2021-01-10T16:51:13,166] : [http-nio-8080-exec-3] : UserController: creat
  INFO [2021-01-10T16:58:37,426] : [http-nio-8080-exec-3] : ResponseExceptionHandler: BadCredentialsException(): ExceptionResponseCustom [httpStatus=500 INTERNAL_SERVER_ERROR, message=INVALID_CREDENTIALS, code=, backendMesage=, fecha=2021-01-10T16:58:37.425]
  INFO [2021-01-10T16:58:42,578] : [http-nio-8080-exec-5] : ResponseExceptionHandler: BadCredentialsException(): ExceptionResponseCustom [httpStatus=500 INTERNAL_SERVER_ERROR, message=INVALID_CREDENTIALS, code=, backendMesage=, fecha=2021-01-10T16:58:42.577]
 DEBUG [2021-01-10T16:58:48,345] : [http-nio-8080-exec-7] : UserController: createAuthenticationToken(): Logueo exitoso
+DEBUG [2021-01-10T18:33:11,243] : [http-nio-8080-exec-2] : UserController: createAuthenticationToken(): Logueo exitoso
+ INFO [2021-01-10T18:33:49,543] : [http-nio-8080-exec-3] : UsuarioServiceImpl: login(): datos incorrectos en el logueo
+ INFO [2021-01-10T18:33:49,625] : [http-nio-8080-exec-3] : ResponseExceptionHandler: BadCredentialsException(): ExceptionResponseCustom [httpStatus=500 INTERNAL_SERVER_ERROR, message=INVALID_CREDENTIALS, code=, backendMesage=, fecha=2021-01-10T18:33:49.624]
+ INFO [2021-01-10T18:34:07,922] : [http-nio-8080-exec-5] : ResponseExceptionHandler: BadCredentialsException(): ExceptionResponseCustom [httpStatus=500 INTERNAL_SERVER_ERROR, message=INVALID_CREDENTIALS, code=, backendMesage=, fecha=2021-01-10T18:34:07.922]
+DEBUG [2021-01-10T18:34:33,261] : [http-nio-8080-exec-7] : UserController: createAuthenticationToken(): Logueo exitoso
+ INFO [2021-01-10T18:34:40,120] : [http-nio-8080-exec-8] : UsuarioServiceImpl: login(): datos incorrectos en el logueo
+ INFO [2021-01-10T18:34:40,204] : [http-nio-8080-exec-8] : ResponseExceptionHandler: BadCredentialsException(): ExceptionResponseCustom [httpStatus=500 INTERNAL_SERVER_ERROR, message=INVALID_CREDENTIALS, code=, backendMesage=, fecha=2021-01-10T18:34:40.204]
